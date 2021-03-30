@@ -1,0 +1,28 @@
+{
+    "name": "ilbronza/ukn",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Davide Bronzini",
+            "email": "davide_bronzini@hotmail.com",
+            "homepage": "https://www.sistema.srl"
+        }
+    ],
+    "homepage": "https://github.com/ilbronza/ukn",
+    "keywords": ["Laravel", "uikit notifications"],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "IlBronza\\Ukn\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IlBronza\\Ukn\\Tests\\": "tests"
+        }
+    }
+}
