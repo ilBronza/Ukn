@@ -1,5 +1,5 @@
 # The license
 
-Copyright (c) author name <author email>
+Copyright (c) Davide Bronzini <davide@sistema.srl>
 
 ...Add your license text here...

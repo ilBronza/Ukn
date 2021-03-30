@@ -1,10 +1,10 @@
 <?php
 
-namespace ilBronza\Ukn;
+namespace IlBronza\Ukn;
 
 use Illuminate\Support\Str;
 
-class UKN
+class Ukn
 {
 	static function displayDatabaseNotification(array $notificationFields)
 	{

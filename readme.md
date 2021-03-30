@@ -1,4 +1,4 @@
-# AccountManager
+# Ukn
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -12,7 +12,7 @@ This is where your description should go. Take a look at [contributing.md](contr
 Via Composer
 
 ``` bash
-$ composer require ilbronza/accountmanager
+$ composer require ilbronza/ukn
 ```
 
 ## Usage
@@ -33,25 +33,25 @@ Please see [contributing.md](contributing.md) for details and a todolist.
 
 ## Security
 
-If you discover any security related issues, please email author email instead of using the issue tracker.
+If you discover any security related issues, please email davide@sistema.srl instead of using the issue tracker.
 
 ## Credits
 
-- [author name][link-author]
+- [Davide Bronzini][link-author]
 - [All Contributors][link-contributors]
 
 ## License
 
-license. Please see the [license file](license.md) for more information.
+MIT. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/ilbronza/accountmanager.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/ilbronza/accountmanager.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/ilbronza/accountmanager/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/ilbronza/ukn.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/ilbronza/ukn.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/ilbronza/ukn/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/ilbronza/accountmanager
-[link-downloads]: https://packagist.org/packages/ilbronza/accountmanager
-[link-travis]: https://travis-ci.org/ilbronza/accountmanager
+[link-packagist]: https://packagist.org/packages/ilbronza/ukn
+[link-downloads]: https://packagist.org/packages/ilbronza/ukn
+[link-travis]: https://travis-ci.org/ilbronza/ukn
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/ilbronza
 [link-contributors]: ../../contributors

@@ -1,19 +1,22 @@
 {
     "name": "ilbronza/ukn",
-    "description": ":package_description",
+    "description": "uikit flash notifications",
     "license": "MIT",
     "authors": [
         {
             "name": "Davide Bronzini",
-            "email": "davide_bronzini@hotmail.com",
+            "email": "davide@sistema.srl",
             "homepage": "https://www.sistema.srl"
         }
     ],
     "homepage": "https://github.com/ilbronza/ukn",
-    "keywords": ["Laravel", "uikit notifications"],
+    "keywords": ["Laravel", "Ukn"],
     "require": {
+        "illuminate/support": "~7|~8"
     },
     "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
     },
     "autoload": {
         "psr-4": {
@@ -23,6 +26,16 @@
     "autoload-dev": {
         "psr-4": {
             "IlBronza\\Ukn\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IlBronza\\Ukn\\UknServiceProvider"
+            ],
+            "aliases": {
+                "Ukn": "IlBronza\\Ukn\\Facades\\Ukn"
+            }
         }
     }
 }
