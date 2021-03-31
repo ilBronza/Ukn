@@ -1,6 +1,6 @@
 <?php
 
-namespace IlBronza\Ukn;
+namespace ilBronza\Ukn;
 
 use Illuminate\Support\Str;
 
