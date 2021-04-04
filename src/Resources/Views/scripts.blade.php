@@ -1,12 +1,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function($)
 {
-    console.log("sessione");
-    console.log('{!! json_encode(session('UiKitNotifications', [])) !!}');
-    console.log('{!! json_encode(Session::has('UiKitNotifications')) !!}');
-
-
-    @foreach(Session::pull('UiKitNotifications') as $type => $messages)
+    @foreach(Session::pull('UiKitNotifications') ?? [] as $type => $messages)
         @foreach($messages as $message)
         add{{ ucfirst($type) }}Notification('{{ $message }}', {{ $loop->index + 1 }});
         @endforeach
