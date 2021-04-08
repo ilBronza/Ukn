@@ -1,6 +1,6 @@
 <?php
 
-namespace ilBronza\Ukn;
+namespace IlBronza\Ukn;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -17,21 +17,21 @@
     },
     "autoload": {
         "psr-4": {
-            "ilBronza\\Ukn\\": "src/"
+            "IlBronza\\Ukn\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ilBronza\\Ukn\\Tests\\": "tests"
+            "IlBronza\\Ukn\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ilBronza\\Ukn\\UknServiceProvider"
+                "IlBronza\\Ukn\\UknServiceProvider"
             ],
             "aliases": {
-                "Ukn": "ilBronza\\Ukn\\Facades\\Ukn"
+                "Ukn": "IlBronza\\Ukn\\Facades\\Ukn"
             }
         }
     }
