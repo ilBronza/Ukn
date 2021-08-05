@@ -8,7 +8,8 @@ class Ukn
 {
 	static function displayDatabaseNotification(array $notificationFields)
 	{
-		static::w(json_encode($notificationFields));
+		if(count($notificationFields) > 0)
+			static::w(json_encode($notificationFields));
 	}
 
 	static function e(string $message = null)
@@ -33,6 +34,12 @@ class Ukn
 
 	static function pushUikitNotification(string $type, string $message)
 	{
+		if(! $message)
+			return ;
+
+		if($message == '')
+			return ;
+
 		$key = [
 			'UiKitNotifications',
 			$type,
