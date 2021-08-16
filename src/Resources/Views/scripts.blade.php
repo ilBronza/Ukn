@@ -3,7 +3,7 @@ jQuery(document).ready(function($)
 {
     @foreach(Session::pull('UiKitNotifications') ?? [] as $type => $messages)
         @foreach($messages as $message)
-        add{{ ucfirst($type) }}Notification('{{ $message }}', {{ $loop->index + 1 }});
+        add{{ ucfirst($type) }}Notification('{!! str_replace("'", "&#039;", $message) !!}', {{ $loop->index + 1 }});
         @endforeach
     @endforeach
 });
