@@ -8,33 +8,33 @@ jQuery(document).ready(function($)
     @endforeach
 });
 
-window.addUiKitNotification = function(status, message, delay)
+window.addUiKitNotification = function(status, message, delay, timeout = 5000)
 {
     UIkit.notification({
         message: message,
         status: status,
         pos: 'top-right',
-        timeout: 5000 * delay
+        timeout: timeout * delay
     });    
 }
 
-window.addSuccessNotification = function(message, delay = 1)
+window.addSuccessNotification = function(message, delay = 1, timeout = null)
 {
-    addUiKitNotification('success', message, delay);
+    addUiKitNotification('success', message, delay, timeout);
 }
 
-window.addDangerNotification = function(message, delay = 1)
+window.addDangerNotification = function(message, delay = 1, timeout = null)
 {
-    addUiKitNotification('danger', message, delay * 2);
+    addUiKitNotification('danger', message, delay * 2, timeout);
 }
 
-window.addWarningNotification = function(message, delay = 1)
+window.addWarningNotification = function(message, delay = 1, timeout = null)
 {
-    addUiKitNotification('warning', message, delay);
+    addUiKitNotification('warning', message, delay, timeout);
 }
 
-window.addPrimaryNotification = function(message, delay = 1)
+window.addPrimaryNotification = function(message, delay = 1, timeout = null)
 {
-    addUiKitNotification('primary', message, delay);
+    addUiKitNotification('primary', message, delay, timeout);
 }
 </script>
