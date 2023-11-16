@@ -18,17 +18,17 @@ window.addUiKitNotification = function(status, message, delay, timeout = 5000)
     });    
 }
 
-window.addSuccessNotification = function(message, delay = 1, timeout = null)
+window.addSuccessNotification = function(message, delay = 1, timeout = {{ config('ukn.success.timeout_ms', 2500) }})
 {
     addUiKitNotification('success', message, delay, timeout);
 }
 
-window.addDangerNotification = function(message, delay = 1, timeout = null)
+window.addDangerNotification = function(message, delay = 1, timeout = {{ config('ukn.danger.timeout_ms', 25000) }})
 {
     addUiKitNotification('danger', message, delay * 2, timeout);
 }
 
-window.addWarningNotification = function(message, delay = 1, timeout = null)
+window.addWarningNotification = function(message, delay = 1, timeout = {{ config('ukn.warning.timeout_ms', 7500) }})
 {
     addUiKitNotification('warning', message, delay, timeout);
 }
