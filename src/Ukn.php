@@ -40,6 +40,18 @@ class Ukn
 		if($message == '')
 			return ;
 
+		$notifications = session()->get('UiKitNotifications', []);
+		$typeMessages = $notifications[$type] ?? [];
+		if (is_array($typeMessages)) {
+			foreach ($typeMessages as $existing) {
+				if ($existing === $message) {
+					return;
+				}
+			}
+		} elseif ($typeMessages === $message) {
+			return;
+		}
+
 		$key = [
 			'UiKitNotifications',
 			$type,
