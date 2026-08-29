@@ -6,6 +6,11 @@ use Illuminate\Support\Str;
 
 class Ukn
 {
+	static function notification(string $message): Notification
+	{
+		return new Notification($message);
+	}
+
 	static function displayDatabaseNotification(array $notificationFields)
 	{
 		if(count($notificationFields) > 0)
@@ -32,7 +37,7 @@ class Ukn
 		static::info($message);
 	}
 
-	static function pushUikitNotification(string $type, string $message)
+	static function pushUikitNotification(string $type, string $message, $options = null)
 	{
 		if(! $message)
 			return ;
@@ -44,7 +49,11 @@ class Ukn
 		$typeMessages = $notifications[$type] ?? [];
 		if (is_array($typeMessages)) {
 			foreach ($typeMessages as $existing) {
-				if ($existing === $message) {
+				$existingMessage = is_array($existing)
+					? ($existing['message'] ?? null)
+					: $existing;
+
+				if ($existingMessage === $message) {
 					return;
 				}
 			}
@@ -58,7 +67,11 @@ class Ukn
 			Str::random()
 		];
 
-		session()->flash(implode(".", $key) , $message ?? __('messages.' . $type));
+		$value = $options === null
+			? $message
+			: array_merge(['message' => $message], $options);
+
+		session()->flash(implode(".", $key) , $value);
 	}
 
 	static function error(string $message)

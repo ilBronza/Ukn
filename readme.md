@@ -17,6 +17,26 @@ $ composer require ilbronza/ukn
 
 ## Usage
 
+The existing shortcuts retain their default position and timeout:
+
+```php
+Ukn::success('Saved');
+```
+
+Use the fluent notification API when a notification needs specific presentation
+options:
+
+```php
+Ukn::notification('Saved')
+    ->success()
+    ->center()
+    ->timeout(5000)
+    ->send();
+```
+
+`center()` places the notification at `top-center`. Use `position()` for any
+other UIkit notification position.
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
